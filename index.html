@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CognoWise | Neuroscience Freelance Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4F46E5",
+              secondary: "#10B981",
+              dark: "#1F2937",
+              light: "#F9FAFB",
+              accent: "#7C3AED",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .neuron-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear forwards;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .portfolio-item {
+        transition: all 0.3s ease;
+      }
+
+      .portfolio-item:hover {
+        transform: scale(1.03);
+      }
+
+      .publication-item {
+        border-left: 3px solid #4f46e5;
+        transition: all 0.3s ease;
+      }
+
+      .publication-item:hover {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <svg
+              class="w-10 h-10 text-primary"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="neuron-path"
+                d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="neuron-path"
+                d="M15 9H15.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="neuron-path"
+                d="M9 9H9.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="neuron-path"
+                d="M12 16V12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="neuron-path"
+                d="M12 8V8.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="ml-3 text-2xl font-bold text-primary"
+              >Cogno<span class="text-secondary">Wise</span></span
+            >
+            <span
+              class="ml-2 text-sm bg-primary text-white px-2 py-1 rounded-full"
+              >Freelance Neuroscientist</span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-dark hover:text-primary font-medium"
+              >Home</a
+            >
+            <a href="#services" class="text-dark hover:text-primary font-medium"
+              >Services</a
+            >
+            <a
+              href="#portfolio"
+              class="text-dark hover:text-primary font-medium"
+              >Portfolio</a
+            >
+            <a
+              href="#publications"
+              class="text-dark hover:text-primary font-medium"
+              >My Research</a
+            >
+            <a href="#about" class="text-dark hover:text-primary font-medium"
+              >About Me</a
+            >
+            <a
+              href="#testimonials"
+              class="text-dark hover:text-primary font-medium"
+              >Testimonials</a
+            >
+            <a href="#contact" class="text-dark hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-dark focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <a href="#home" class="block py-2 text-dark hover:text-primary"
+            >Home</a
+          >
+          <a href="#services" class="block py-2 text-dark hover:text-primary"
+            >Services</a
+          >
+          <a href="#portfolio" class="block py-2 text-dark hover:text-primary"
+            >Portfolio</a
+          >
+          <a
+            href="#publications"
+            class="block py-2 text-dark hover:text-primary"
+            >My Research</a
+          >
+          <a href="#about" class="block py-2 text-dark hover:text-primary"
+            >About Me</a
+          >
+          <a
+            href="#testimonials"
+            class="block py-2 text-dark hover:text-primary"
+            >Testimonials</a
+          >
+          <a href="#contact" class="block py-2 text-dark hover:text-primary"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="py-20 bg-gradient-to-r from-primary to-accent text-white"
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Brain Expertise
+            <span class="text-secondary">for Your Projects</span>
+          </h1>
+          <p class="text-xl mb-8">
+            Hi, I'm Dr. Goncalves, a freelance neuroscientist offering specialized
+            services to universities, companies, and researchers.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <a
+              href="#contact"
+              class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+              >Get Started</a
+            >
+            <a
+              href="#services"
+              class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+              >My Services</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+            <div
+              class="absolute inset-0 bg-white bg-opacity-20 rounded-full animate-ping"
+            ></div>
+            <div
+              class="absolute inset-4 bg-white bg-opacity-20 rounded-full animate-ping delay-300"
+            ></div>
+            <div
+              class="absolute inset-8 bg-white bg-opacity-20 rounded-full animate-ping delay-700"
+            ></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <!-- Replace with your photo if desired -->
+              <img
+                src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+                alt="Brain illustration"
+                class="w-full h-full object-cover rounded-full border-4 border-white floating"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            My <span class="text-primary">Expert</span> Services
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Specialized neuroscience services tailored to your specific needs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-lg p-8 transition duration-300 hover:border-primary border-2 border-transparent"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-file-alt text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Scientific Writing</h3>
+            <p class="text-gray-600 mb-4">
+              High-quality review articles, research papers, and grant
+              applications that effectively communicate your scientific
+              findings.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Literature reviews
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Grant
+                applications
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Research
+                papers
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-lg p-8 transition duration-300 hover:border-primary border-2 border-transparent"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-language text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">
+              Translation Services
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Accurate and nuanced translations of scientific documents between
+              multiple languages while maintaining technical precision.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Research
+                papers
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Conference materials
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Technical documents
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-lg p-8 transition duration-300 hover:border-primary border-2 border-transparent"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-brain text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">AI Training</h3>
+            <p class="text-gray-600 mb-4">
+              Specialized training of AI models with neuroscience expertise to
+              enhance their understanding and processing of complex neurological
+              concepts.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Model
+                fine-tuning
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Dataset
+                curation
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Domain-specific training
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-lg p-8 transition duration-300 hover:border-primary border-2 border-transparent"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-search text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Peer Review</h3>
+            <p class="text-gray-600 mb-4">
+              Comprehensive and constructive peer review services for
+              neuroscience manuscripts before journal submission.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Methodological rigor
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Statistical analysis
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Clarity
+                & structure
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-lg p-8 transition duration-300 hover:border-primary border-2 border-transparent"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-chalkboard-teacher text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Consulting</h3>
+            <p class="text-gray-600 mb-4">
+              Expert guidance on neuroscience research design, data
+              interpretation, and application development.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Experimental design
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i> Data
+                analysis
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Neurotechnology
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-lg p-8 transition duration-300 hover:border-primary border-2 border-transparent"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-lightbulb text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Custom Solutions</h3>
+            <p class="text-gray-600 mb-4">
+              Tailored neuroscience services designed to meet your unique
+              requirements and challenges.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Specialized research
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Educational content
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-secondary mr-2"></i>
+                Project-specific support
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            My <span class="text-primary">Portfolio</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Examples of my previous work and projects
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Portfolio Item 1 -->
+          <div
+            class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center"
+            >
+              <i class="fas fa-file-pdf text-white text-6xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-dark">
+                Literature Review
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive review on neuroplasticity in aging brains for a
+                leading neuroscience journal.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+                >View Sample <i class="fas fa-arrow-right ml-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div
+            class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-secondary to-green-500 flex items-center justify-center"
+            >
+              <i class="fas fa-project-diagram text-white text-6xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-dark">
+                Grant Application
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Successful NIH grant application for a study on neural
+                correlates of decision-making.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+                >View Excerpt <i class="fas fa-arrow-right ml-2"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3 -->
+          <div
+            class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-accent to-purple-600 flex items-center justify-center"
+            >
+              <i class="fas fa-robot text-white text-6xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-dark">
+                AI Training Project
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Specialized training of an NLP model for neuroscience literature
+                analysis.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+                >Learn More <i class="fas fa-arrow-right ml-2"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+          >
+            View Full Portfolio
+            <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            My <span class="text-primary">Research</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Peer-reviewed publications demonstrating my neuroscience expertise
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+          <!-- Publication 1 -->
+          <div class="publication-item bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-dark mb-2">
+              Neural Mechanisms of Cognitive Flexibility in Aging
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <span class="font-medium">Journal of Cognitive Neuroscience</span>
+              | 2022 | Impact Factor: 4.2
+            </p>
+            <p class="text-gray-600 mb-4">
+              First-authored research paper investigating age-related changes in
+              neural networks supporting cognitive flexibility.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+              >
+                <i class="fas fa-file-pdf mr-2"></i> Full Text
+              </a>
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+              >
+                <i class="fas fa-quote-right mr-2"></i> Cite
+              </a>
+            </div>
+          </div>
+
+          <!-- Publication 2 -->
+          <div class="publication-item bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-dark mb-2">
+              A Meta-Analysis of fMRI Studies on Working Memory
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <span class="font-medium"
+                >Neuroscience & Biobehavioral Reviews</span
+              >
+              | 2021 | Impact Factor: 8.5
+            </p>
+            <p class="text-gray-600 mb-4">
+              Co-authored meta-analysis synthesizing findings from 127 fMRI
+              studies on working memory processes.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+              >
+                <i class="fas fa-file-pdf mr-2"></i> Full Text
+              </a>
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+              >
+                <i class="fas fa-quote-right mr-2"></i> Cite
+              </a>
+            </div>
+          </div>
+
+          <!-- Publication 3 -->
+          <div class="publication-item bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-dark mb-2">
+              Translating Neuroscience: Challenges in Cross-Language Research
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <span class="font-medium">Trends in Neuroscience</span> | 2020 |
+              Impact Factor: 12.8
+            </p>
+            <p class="text-gray-600 mb-4">
+              Review article examining methodological considerations in
+              cross-cultural neuroscience research.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+              >
+                <i class="fas fa-file-pdf mr-2"></i> Full Text
+              </a>
+              <a
+                href="#"
+                class="text-primary font-medium inline-flex items-center"
+              >
+                <i class="fas fa-quote-right mr-2"></i> Cite
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+          >
+            View All Publications
+            <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">
+              About <span class="text-primary">Me</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              I'm [Your Name], a dedicated neuroscientist with [X] years of
+              experience in both academic research and practical applications of
+              neuroscience.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              After completing my PhD in Neuroscience at [University], I worked
+              as a [Previous Position] at [Institution], where I [brief
+              description of your role]. Now, I'm applying my expertise to help
+              clients through freelance consulting.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div
+                    class="w-8 h-8 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-graduation-cap text-primary"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold text-dark">Education</h4>
+                  <p class="text-gray-600">
+                    PhD in Neuroscience, [University], [Year]
+                  </p>
+                  <p class="text-gray-600">
+                    MSc in Cognitive Science, [University], [Year]
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div
+                    class="w-8 h-8 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-flask text-primary"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold text-dark">
+                    Research Focus
+                  </h4>
+                  <p class="text-gray-600">
+                    Cognitive neuroscience, neuroplasticity, decision-making,
+                    neuroimaging techniques
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div
+                    class="w-8 h-8 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-tools text-primary"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold text-dark">
+                    Technical Skills
+                  </h4>
+                  <p class="text-gray-600">
+                    fMRI, EEG, Python, R, statistical analysis, scientific
+                    writing, grant writing
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-6 text-dark">
+                Why Work With Me?
+              </h3>
+              <div class="space-y-6">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-star text-primary text-xl"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">
+                      Academic Rigor
+                    </h4>
+                    <p class="text-gray-600">
+                      My work is grounded in current neuroscience research and
+                      maintains the highest academic standards.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-bolt text-primary text-xl"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">
+                      Practical Experience
+                    </h4>
+                    <p class="text-gray-600">
+                      I understand the challenges of both academic research and
+                      industry applications.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-comments text-primary text-xl"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">
+                      Clear Communication
+                    </h4>
+                    <p class="text-gray-600">
+                      I specialize in making complex neuroscience concepts
+                      accessible to diverse audiences.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i
+                        class="fas fa-hand-holding-heart text-primary text-xl"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">
+                      Personalized Approach
+                    </h4>
+                    <p class="text-gray-600">
+                      As a freelancer, I can give your project the individual
+                      attention it deserves.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-primary text-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Client <span class="text-secondary">Testimonials</span>
+          </h2>
+          <p class="text-lg opacity-90 max-w-2xl mx-auto">
+            What my clients say about working with me
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm"
+          >
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/32.jpg"
+                  alt="Dr. Sarah Johnson"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Dr. Sarah Johnson</h4>
+                <p class="text-secondary text-sm">
+                  Research Director, NeuroTech Inc.
+                </p>
+              </div>
+            </div>
+            <p class="mb-6 italic">
+              "[Your Name] transformed our grant application from good to
+              outstanding. Their deep understanding of neuroscience and ability
+              to articulate complex concepts clearly resulted in our most
+              successful funding application to date."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm"
+          >
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/45.jpg"
+                  alt="Prof. Michael Chen"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Prof. Michael Chen</h4>
+                <p class="text-secondary text-sm">
+                  Department Head, Stanford University
+                </p>
+              </div>
+            </div>
+            <p class="mb-6 italic">
+              "The literature review service provided by [Your Name] was
+              exceptional. They synthesized a vast amount of research into a
+              coherent narrative that became the foundation for our new research
+              direction. Highly recommended!"
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm"
+          >
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Dr. Elena Rodriguez"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Dr. Elena Rodriguez</h4>
+                <p class="text-secondary text-sm">CEO, BrainAI Solutions</p>
+              </div>
+            </div>
+            <p class="mb-6 italic">
+              "Working with [Your Name] to train our AI models on neuroscience
+              concepts was a game-changer. Their expertise helped us achieve
+              breakthroughs in model performance that we couldn't have
+              accomplished alone."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            Get in <span class="text-primary">Touch</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Ready to discuss your neuroscience project? Contact me today for a
+            free consultation.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-6 text-dark">
+                Contact Information
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-envelope text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">Email Me</h4>
+                    <p class="text-gray-600">contact@cognowise.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-phone-alt text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">Call Me</h4>
+                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">Location</h4>
+                    <p class="text-gray-600">
+                      Available for remote work worldwide
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-10">
+                <h4 class="text-xl font-semibold mb-4 text-dark">
+                  Connect With Me
+                </h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="fab fa-researchgate"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <form class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 font-medium mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="service"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Service Interested In</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                >
+                  <option value="">Select a service</option>
+                  <option value="writing">Scientific Writing</option>
+                  <option value="translation">Translation Services</option>
+                  <option value="ai">AI Training</option>
+                  <option value="review">Peer Review</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="custom">Custom Solutions</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105"
+              >
+                Send Message <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center">
+              <svg
+                class="w-10 h-10 text-primary"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 9H15.01"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9 9H9.01"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 16V12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 8V8.01"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="ml-3 text-2xl font-bold text-primary"
+                >Cogno<span class="text-secondary">Wise</span></span
+              >
+              <span
+                class="ml-2 text-sm bg-primary text-white px-2 py-1 rounded-full"
+                >Freelance Neuroscientist</span
+              >
+            </div>
+            <p class="mt-4 text-gray-400 max-w-xs">
+              Applying neuroscience expertise to help researchers and
+              organizations achieve their goals.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Services</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >Scientific Writing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >Translation Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >AI Training</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >Peer Review</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-400 hover:text-white transition"
+                    >About Me</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#portfolio"
+                    class="text-gray-400 hover:text-white transition"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#publications"
+                    class="text-gray-400 hover:text-white transition"
+                    >My Research</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    class="text-gray-400 hover:text-white transition"
+                    >Testimonials</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Resources</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Research Tools</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Funding Guide</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >FAQs</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2023 CognoWise | Freelance Neuroscience Services. All rights
+            reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              ><i class="fab fa-researchgate"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Form submission
+      const contactForm = document.querySelector("form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const service = document.getElementById("service").value;
+          const message = document.getElementById("message").value;
+
+          // Here you would typically send this data to a server
+          console.log("Form submitted:", { name, email, service, message });
+
+          // Show success message
+          alert("Thank you for your message! I will get back to you soon.");
+
+          // Reset form
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>
