@@ -93,67 +93,13 @@
       <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <svg
-              class="w-10 h-10 text-primary"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="neuron-path"
-                d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="neuron-path"
-                d="M15 9H15.01"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="neuron-path"
-                d="M9 9H9.01"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="neuron-path"
-                d="M12 16V12"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="neuron-path"
-                d="M12 8V8.01"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
             <img src="Images/logo.png" alt="CognoWise Logo" class="w-15 h-10" />
-            <span class="ml-3 text-2xl font-bold text-primary"
+            <span class="text-2xl font-bold text-primary"
               >Cogno<span class="text-secondary">Wise</span></span
             >
             <span
               class="ml-2 text-sm bg-primary text-white px-2 py-1 rounded-full"
-              > Medical Writing • Consulting</span
+              > Medical Writing & Consulting</span
             >
           </div>
           <div class="hidden md:flex space-x-8">
@@ -171,11 +117,11 @@
             <a href="#about" class="text-dark hover:text-primary font-medium"
               >About Me</a
             >
-            <a
+            <!-- <a
               href="#testimonials"
               class="text-dark hover:text-primary font-medium"
               >Testimonials</a
-            >
+            > -->
             <a href="#contact" class="text-dark hover:text-primary font-medium"
               >Contact</a
             >
@@ -200,11 +146,11 @@
           <a href="#about" class="block py-2 text-dark hover:text-primary"
             >About Me</a
           >
-          <a
+          <!-- <a
             href="#testimonials"
             class="block py-2 text-dark hover:text-primary"
             >Testimonials</a
-          >
+          > -->
           <a href="#contact" class="block py-2 text-dark hover:text-primary"
             >Contact</a
           >
@@ -225,10 +171,10 @@
             Scientific Expertise 
             <span class="text-secondary">You Can Rely On</span>
           </h1>
-          <p class="text-xl mb-8 text-justify">
+          <p class="text-xl mb-8">
             I'm Dr. Rafaella A. Gonçalves, neuroscientist and founder of CognoWise.
-            I have over 10 years of experience in biomedical research and medical writing, and I help healthcare companies, 
-            universities, and researchers create high-quality, evidence-based materials.</p>
+            I have over 10 years of experience in biomedical research and medical writing, and I help 
+            universities, companies, and researchers create high-quality, evidence-based materials.</p>
           <div
             class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
           >
@@ -467,12 +413,24 @@
             My <span class="text-primary">Work</span>
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are examples of my peer-reviewed publications. </p>
+            Below are examples of my peer-reviewed publications </p>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto"> For a full list, visit my Google Scholar.</p>
-          
+            <div class="text-center mt-6">
+              <a
+                href="https://scholar.google.com/citations?hl=pt-BR&user=rYPIQKAAAAAJ"
+                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+              >
+                View My Google Scholar
+                <i class="fas fa-external-link-alt ml-2"></i>
+              </a>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <!-- Review Articles -->
+        <div class="mb-12 mt-4">
+          <h3 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-6">
+            REVIEW ARTICLES </p>       
+          </h3>     
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Portfolio Item 1 -->
           <div
             class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden"
@@ -536,7 +494,16 @@
               ></a>
             </div>
           </div>
+        </div>
+  
 
+       <!-- Original Articles -->
+        <div>
+          <h3 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-6 mt-16">
+              ORIGINAL ARTICLES            
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
           <!-- Portfolio Item 3 -->
           <div
             class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden"
@@ -567,6 +534,9 @@
               ></a>
             </div>
           </div>
+
+          
+
 
           <!-- Portfolio Item 4 -->
           <div
@@ -600,17 +570,16 @@
             </div>
           </div>
         </div>
-        <div class="text-center mt-12">
-          <a
-            href="https://scholar.google.com/citations?hl=pt-BR&user=rYPIQKAAAAAJ"
-            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
-          >
-            View My Google Scholar
-            <i class="fas fa-external-link-alt ml-2"></i>
-          </a>
-        </div>
       </div>
     </section>
+
+
+
+
+
+
+
+
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
@@ -620,11 +589,11 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">
               About <span class="text-primary">Me</span>
             </h2>
-            <p class="text-lg text-gray-600 mb-6 text-justify">
+            <p class="text-lg text-gray-600 mb-6 ">
               I'm Dr. Rafaella A. Gonçalves, a PhD neuroscientist with over 10 years
               of experience in both academic and private sectors.  
             </p>
-            <p class="text-lg text-gray-600 mb-6 text-justify">
+            <p class="text-lg text-gray-600 mb-6">
               After earning my PhD at Queen's University in Canada, 
               and completing a postdoc at Gladstone Institutes/UCSF, I now use my expertise
               from bench-to-publication to help healthcare companies, 
@@ -660,10 +629,10 @@
                 </div>
                 <div class="ml-4">
                   <h4 class="text-lg font-semibold text-dark">
-                    Research Focus
+                    Topics
                   </h4>
                   <p class="text-gray-600">
-                    Aging, Neurology, Biochemistry, Metabolism, Behavior, AI in medicine
+                    Aging, Neurology, Biochemistry, Metabolism, Behavior, AI in medicine, Cardiology, Dermatology
                   </p>
                 </div>
               </div>
@@ -680,7 +649,7 @@
                     Key Skills
                   </h4>
                   <p class="text-gray-600">
-                    Medical writing, Data Analysis (R, Python, SPSS, Python, GraphPad Prism), Evidence synthesis, AI
+                    Medical writing, Data Analysis (R, SPSS, GraphPad Prism, Python), Evidence synthesis, AI
                   </p>
                 </div>
               </div>
@@ -704,7 +673,7 @@
                     <h4 class="text-lg font-semibold text-dark">
                       Academic Rigor
                     </h4>
-                    <p class="text-gray-600 text-justify">
+                    <p class="text-gray-600 ">
                       My work is grounded in current neuroscience research and
                       maintains the highest academic standards.
                     </p>
@@ -722,7 +691,7 @@
                     <h4 class="text-lg font-semibold text-dark">
                       Practical Experience
                     </h4>
-                    <p class="text-gray-600 text-justify">
+                    <p class="text-gray-600">
                       I understand the challenges of both academic research and
                       industry applications.
                     </p>
@@ -740,7 +709,7 @@
                     <h4 class="text-lg font-semibold text-dark">
                       Clear Communication
                     </h4>
-                    <p class="text-gray-600 text-justify">
+                    <p class="text-gray-600">
                       I specialize in making complex neuroscience concepts
                       accessible to diverse audiences.
                     </p>
@@ -760,7 +729,7 @@
                     <h4 class="text-lg font-semibold text-dark ">
                       Personalized Approach
                     </h4>
-                    <p class="text-gray-600 text-justify">
+                    <p class="text-gray-600 ">
                       As a freelancer, I can give your project the individual
                       attention it deserves.
                     </p>
@@ -774,7 +743,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-primary text-white">
+    <!-- <section id="testimonials" class="py-20 bg-primary text-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -785,9 +754,9 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
           <!-- Testimonial 1 -->
-          <div
+          <!-- <div
             class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm"
           >
             <div class="flex items-center mb-6">
@@ -811,10 +780,10 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-          </div>
+          </div> -->
 
           <!-- Testimonial 2 -->
-          <div
+          <!-- <div
             class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm"
           >
             <div class="flex items-center mb-6">
@@ -838,10 +807,10 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-          </div>
+          </div> -->
 
           <!-- Testimonial 3 -->
-          <div
+          <!-- <div
             class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm"
           >
             <div class="flex items-center mb-6">
@@ -866,10 +835,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
@@ -883,7 +852,7 @@
 
         <div class="flex flex-col md:flex-row">
           <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
               <h3 class="text-2xl font-bold mb-6 text-dark">
                 Contact Information
               </h3>
@@ -902,8 +871,24 @@
                     <p class="text-gray-600">contact@cognowise.com</p>
                   </div>
                 </div>
-
-            
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center"
+                    >
+                    <a
+                    href="https://www.linkedin.com/in/goncalvesra"
+                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-dark">Connect on LinkedIn</h4>
+                    <p class="text-gray-600">linkedin.com/in/goncalvesra</p>
+                  </div>
+                </div>
 
                 <div class="flex items-start">
                   <div class="flex-shrink-0 mt-1">
@@ -916,42 +901,16 @@
                   <div class="ml-4">
                     <h4 class="text-lg font-semibold text-dark">Location</h4>
                     <p class="text-gray-600">
-                      Ottawa, Canada (available for remote work worldwide)
+                      Ottawa, ON, Canada (available worldwide)
                     </p>
                   </div>
-                </div>
-              </div>
-
-              <div class="mt-10">
-                <h4 class="text-xl font-semibold mb-4 text-dark">
-                  Connect With Me
-                </h4>
-                <div class="flex space-x-4">
-                  <a
-                    href="https://www.linkedin.com/in/goncalvesra"
-                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
-                  >
-                    <i class="fab fa-researchgate"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="md:w-1/2">
-            <form class="bg-gray-50 p-8 rounded-xl shadow-lg">
+            <form class="bg-white p-8 rounded-xl shadow-lg">
               <div class="mb-6">
                 <label for="name" class="block text-gray-700 font-medium mb-2"
                   >Full Name</label
@@ -1028,65 +987,17 @@
         <div class="flex flex-col md:flex-row justify-between">
           <div class="mb-8 md:mb-0">
             <div class="flex items-center">
-              <svg
-                class="w-10 h-10 text-primary"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15 9H15.01"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M9 9H9.01"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 16V12"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 8V8.01"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <img src="Images/logo.png" alt="CognoWise Logo" class="w-15 h-10" />
               <span class="ml-3 text-2xl font-bold text-primary"
                 >Cogno<span class="text-secondary">Wise</span></span
               >
               <span
                 class="ml-2 text-sm bg-primary text-white px-2 py-1 rounded-full"
-                >Freelance Neuroscientist</span
+                >Medical Writing & Consulting</span
               >
             </div>
             <p class="mt-4 text-gray-400 max-w-xs">
-              Applying neuroscience expertise to help researchers and
+              Applying scientific expertise to help researchers and
               organizations achieve their goals.
             </p>
           </div>
@@ -1106,7 +1017,7 @@
                   <a
                     href="#services"
                     class="text-gray-400 hover:text-white transition"
-                    >Translation</a
+                    >Review & Editing </a
                   >
                 </li>
                 <li>
@@ -1120,7 +1031,21 @@
                   <a
                     href="#services"
                     class="text-gray-400 hover:text-white transition"
-                    >Review & Editing </a
+                    >Consulting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >Translation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >Custom Solutions</a
                   >
                 </li>
               </ul>
@@ -1142,14 +1067,14 @@
                     class="text-gray-400 hover:text-white transition"
                     >My Work</a
                   >
-                </li>
-                <li>
+                <!-- </li>
+                 <li>
                   <a
                     href="#testimonials"
                     class="text-gray-400 hover:text-white transition"
                     >Testimonials</a
                   >
-                </li>
+                </li> -->
               </ul>
             </div>
 
@@ -1159,16 +1084,6 @@
                 <li>
                   <a href="#" class="text-gray-400 hover:text-white transition"
                     >Blog</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-400 hover:text-white transition"
-                    >Research Tools</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-400 hover:text-white transition"
-                    >Funding Guide</a
                   >
                 </li>
                 <li>
@@ -1185,18 +1100,12 @@
           class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p class="text-gray-400 mb-4 md:mb-0">
-            © 2023 CognoWise | Freelance Neuroscience Services. All rights
+            © 2025 CognoWise | Medical Writing & Consulting. All rights
             reserved.
           </p>
           <div class="flex space-x-6">
             <a href="#" class="text-gray-400 hover:text-white transition"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" class="text-gray-400 hover:text-white transition"
               ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a href="#" class="text-gray-400 hover:text-white transition"
-              ><i class="fab fa-researchgate"></i
             ></a>
             <a href="#" class="text-gray-400 hover:text-white transition"
               ><i class="fab fa-github"></i
