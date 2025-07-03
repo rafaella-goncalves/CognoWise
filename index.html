@@ -972,8 +972,7 @@
 
           <div class="md:w-1/2">
             <form
-              action="https://formspree.io/f/xovwbpdz"
-              method="POST"
+              id="contactForm"
               class="bg-white p-8 rounded-xl shadow-lg"
             >
               <div class="mb-6">
@@ -1210,5 +1209,33 @@
         });
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch("https://formspree.io/f/xovwbpdz", {
+              method: "POST",
+              headers: { "Accept": "application/json" },
+              body: formData
+            });
+
+            if (response.ok) {
+              alert("✅ Thank you! Your message was sent. I’ll be in touch soon.");
+              form.reset();
+            } else {
+              alert("⚠️ Sorry, there was a problem sending your message.");
+            }
+          } catch (error) {
+            alert("⚠️ Error: Could not send your message. Please try again later.");
+          }
+        });
+      });   
+    </script>     
   </body>
 </html>
