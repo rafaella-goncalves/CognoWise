@@ -7,35 +7,35 @@
 <meta name="description" content="Dr. Rafaella A. Gonçalves — neuroscientist and founder of CognoWise. Medical writing, scientific editing & neuroscience consulting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #FAF8F3; color: #16191F; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  body { margin: 0; background: #FBFBFC; color: #16191F; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
   @keyframes cw-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* Reveal-on-scroll */
   [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   [data-reveal].revealed { opacity: 1; transform: translateY(0); }
   [data-reveal].delay-1 { transition-delay: .1s; }
-  [data-reveal].delay-2 { transition-delay: .2s; }
 
   /* Nav */
-  .nav { position: sticky; top: 0; z-index: 50; background: rgba(250,248,243,0.92); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid #DCD6C8; }
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(251,251,252,0.92); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid #E5E7EB; }
   .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; color: #16191F; }
-  .nav-logo img { width: 42px; height: 42px; object-fit: contain; margin: -4px 0; }
-  .nav-wordmark { font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; letter-spacing: -0.01em; }
-  .nav-wordmark em { font-style: italic; color: #3A37CC; }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; color: #16191F; }
+  .nav-badge { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 16px; background: #16191F; box-shadow: 0 3px 12px rgba(22,25,31,0.2); flex-shrink: 0; }
+  .nav-badge img { width: 46px; height: 46px; object-fit: contain; filter: brightness(0) invert(1); }
+  .nav-wordmark-stack { display: inline-flex; flex-direction: column; line-height: 1.05; }
+  .nav-wordmark { font-family: 'Newsreader', serif; font-size: 32px; font-weight: 600; letter-spacing: -0.015em; color: #16191F; }
+  .nav-wordmark em { font-style: italic; font-weight: 500; color: #3A37CC; }
+  .nav-tagline { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: #9A9DA5; margin-top: 5px; padding-left: 2px; }
   .nav-links { display: flex; align-items: center; gap: 36px; }
   .nav-link { text-decoration: none; color: #33363D; font-size: 14.5px; font-weight: 500; transition: color .2s ease; }
   .nav-link:hover { color: #3A37CC; }
-  .nav-cta { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; background: #16191F; color: #F1EDE4; font-size: 14px; font-weight: 600; padding: 11px 19px; border-radius: 999px; transition: background .2s ease; }
+  .nav-cta { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; background: #16191F; color: #F2F4F7; font-size: 14px; font-weight: 600; padding: 11px 19px; border-radius: 999px; transition: background .2s ease; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
   .nav-cta:hover { background: #000; }
-  .nav-cta .mono { font-family: 'IBM Plex Mono', monospace; }
-  .nav-burger { display: none; background: none; border: 1px solid #C9C2B2; border-radius: 8px; width: 42px; height: 42px; cursor: pointer; align-items: center; justify-content: center; color: #16191F; }
-  .nav-mobile { display: none; border-top: 1px solid #DCD6C8; padding: 14px 32px 22px; flex-direction: column; gap: 4px; }
+  .nav-burger { display: none; background: none; border: 1px solid #CCD1D8; border-radius: 8px; width: 42px; height: 42px; cursor: pointer; align-items: center; justify-content: center; color: #16191F; }
+  .nav-mobile { display: none; border-top: 1px solid #E5E7EB; padding: 14px 32px 22px; flex-direction: column; gap: 4px; }
   .nav-mobile a { text-decoration: none; color: #16191F; font-size: 16px; font-weight: 500; padding: 9px 0; display: block; }
   .nav-mobile a.cta { color: #3A37CC; font-weight: 600; }
   .nav-mobile.open { display: flex; }
@@ -49,27 +49,25 @@
   .hero-h1 em { font-style: italic; color: #3A37CC; }
   .hero-body { max-width: 30em; margin: 26px 0 0; font-size: 18.5px; line-height: 1.62; color: #44464C; animation: cw-rise .7s ease .24s both; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; animation: cw-rise .7s ease .34s both; }
-  .btn-primary { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: #3A37CC; color: #fff; font-size: 15px; font-weight: 600; padding: 15px 26px; border-radius: 999px; transition: background .2s ease; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: #3A37CC; color: #fff; font-size: 15px; font-weight: 600; padding: 15px 26px; border-radius: 999px; transition: background .2s ease; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
   .btn-primary:hover { background: #2A2799; }
-  .btn-ghost { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: transparent; color: #16191F; font-size: 15px; font-weight: 600; padding: 15px 24px; border-radius: 999px; border: 1px solid #C9C2B2; transition: border-color .2s ease, background .2s ease; }
-  .btn-ghost:hover { border-color: #3A37CC; background: #EFEBE2; }
+  .btn-ghost { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: transparent; color: #16191F; font-size: 15px; font-weight: 600; padding: 15px 24px; border-radius: 999px; border: 1px solid #CCD1D8; transition: border-color .2s ease, background .2s ease; }
+  .btn-ghost:hover { border-color: #3A37CC; background: #F1F3F5; }
   .hero-stats { display: flex; gap: 40px; margin-top: 46px; animation: cw-rise .7s ease .44s both; }
   .hero-stat-val { font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; color: #16191F; line-height: 1; }
   .hero-stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #76777C; margin-top: 8px; }
-  .hero-divider { width: 1px; background: #DCD6C8; }
-  .hero-portrait { position: relative; animation: cw-rise .8s ease .3s both; }
-  .hero-portrait-shadow { position: absolute; inset: 20px -14px -14px 20px; background: #ECE7DD; border: 1px solid #E2DCCF; border-radius: 22px; z-index: 0; }
-  .hero-portrait-frame { position: relative; z-index: 1; border: 1px solid #E2DCCF; border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 14px 40px -18px rgba(22,25,31,0.25); }
-  .hero-portrait-frame img { display: block; width: 100%; }
+  .hero-divider { width: 1px; background: #E5E7EB; }
+  .hero-portrait-wrap { display: flex; justify-content: center; animation: cw-rise .8s ease .3s both; }
+  .hero-portrait-circle { width: 100%; max-width: 420px; aspect-ratio: 1/1; border-radius: 50%; border: 1.5px solid #3A37CC; overflow: hidden; background: #FBFBFC; }
+  .hero-portrait-circle img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; }
 
   /* Credibility strip */
-  .cred-strip { border-top: 1px solid #DCD6C8; border-bottom: 1px solid #DCD6C8; background: #EFEBE2; }
+  .cred-strip { border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; background: #F1F3F5; }
   .cred-inner { max-width: 1200px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
   .cred-label { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8B8F; white-space: nowrap; }
   .cred-items { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; font-family: 'Newsreader', serif; font-size: 18px; color: #3C3E44; }
   .cred-item { display: inline-flex; align-items: center; gap: 9px; }
   .cred-item.italic { font-style: italic; }
-  .cred-item svg { flex-shrink: 0; }
 
   /* Services */
   .services { max-width: 1200px; margin: 0 auto; padding: 96px 32px 84px; }
@@ -77,9 +75,9 @@
   .section-h2 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 46px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; }
   .section-intro { margin-bottom: 54px; max-width: 40em; }
   .section-intro p { font-size: 17px; color: #5A5C62; margin: 18px 0 0; max-width: 34em; }
-  .svc-list { border-top: 1px solid #DCD6C8; }
-  .svc-row { display: grid; grid-template-columns: 64px 1fr 1.1fr; gap: 32px; padding: 30px 18px; border-bottom: 1px solid #DCD6C8; transition: background .25s ease; align-items: start; }
-  .svc-row:hover { background: #EBE6DB; }
+  .svc-list { border-top: 1px solid #E5E7EB; }
+  .svc-row { display: grid; grid-template-columns: 64px 1fr 1.1fr; gap: 32px; padding: 30px 18px; border-bottom: 1px solid #E5E7EB; transition: background .25s ease; align-items: start; }
+  .svc-row:hover { background: #F1F3F5; }
   .svc-num { font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #3A37CC; padding-top: 6px; }
   .svc-title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; line-height: 1.15; margin: 0 0 10px; letter-spacing: -0.01em; }
   .svc-desc { margin: 0; font-size: 15.5px; color: #5A5C62; line-height: 1.55; max-width: 24em; }
@@ -88,23 +86,23 @@
   .svc-bullet { flex-shrink: 0; margin-top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #3A37CC; display: inline-block; }
 
   /* Selected work */
-  .work { background: #16191F; color: #F1EDE4; }
+  .work { background: #16191F; color: #F2F4F7; }
   .work-inner { max-width: 1200px; margin: 0 auto; padding: 96px 32px 90px; }
   .work-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; margin-bottom: 18px; }
   .work-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #9E9BF0; margin-bottom: 16px; }
-  .work-h2 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 46px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; max-width: 14em; color: #F6F2E9; }
-  .work-meta { margin: 18px 0 0; font-size: 16px; color: #A6A29A; max-width: 30em; }
-  .btn-scholar { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; background: transparent; color: #F1EDE4; font-size: 14.5px; font-weight: 600; padding: 13px 22px; border-radius: 999px; border: 1px solid rgba(241,237,228,0.28); transition: background .2s ease, border-color .2s ease; white-space: nowrap; }
-  .btn-scholar:hover { background: rgba(241,237,228,0.1); border-color: rgba(241,237,228,0.5); }
+  .work-h2 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 46px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; max-width: 14em; color: #F7F8FA; }
+  .work-meta { margin: 18px 0 0; font-size: 16px; color: #A2A6AE; max-width: 30em; }
+  .btn-scholar { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; background: transparent; color: #F2F4F7; font-size: 14.5px; font-weight: 600; padding: 13px 22px; border-radius: 999px; border: 1px solid rgba(242,244,247,0.28); transition: background .2s ease, border-color .2s ease; white-space: nowrap; }
+  .btn-scholar:hover { background: rgba(242,244,247,0.1); border-color: rgba(242,244,247,0.5); }
   .pub-groups { margin-top: 50px; }
   .pub-group { margin-bottom: 14px; }
-  .pub-group-label { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9E9BF0; padding: 0 0 16px; border-bottom: 1px solid rgba(241,237,228,0.16); }
-  .pub-row { display: grid; grid-template-columns: 230px 1fr 56px; gap: 28px; padding: 19px 12px; border-bottom: 1px solid rgba(241,237,228,0.14); text-decoration: none; color: #F1EDE4; align-items: start; transition: background .25s ease; }
+  .pub-group-label { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9E9BF0; padding: 0 0 16px; border-bottom: 1px solid rgba(242,244,247,0.16); }
+  .pub-row { display: grid; grid-template-columns: 230px 1fr 56px; gap: 28px; padding: 19px 12px; border-bottom: 1px solid rgba(242,244,247,0.14); text-decoration: none; color: #F2F4F7; align-items: start; transition: background .25s ease; }
   .pub-row:hover { background: rgba(158,155,240,0.08); }
   .pub-journal { font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; color: #E4DFD5; line-height: 1.25; }
-  .pub-year { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #8C8980; margin-top: 9px; }
-  .pub-title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 22px; line-height: 1.28; margin: 0 0 9px; letter-spacing: -0.01em; color: #F6F2E9; }
-  .pub-desc { margin: 0; font-size: 14.5px; color: #A6A29A; line-height: 1.5; max-width: 42em; }
+  .pub-year { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #8C9099; margin-top: 9px; }
+  .pub-title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 22px; line-height: 1.28; margin: 0 0 9px; letter-spacing: -0.01em; color: #F7F8FA; }
+  .pub-desc { margin: 0; font-size: 14.5px; color: #A2A6AE; line-height: 1.5; max-width: 42em; }
   .pub-arrow { display: flex; justify-content: flex-end; padding-top: 4px; }
   .pub-arrow span { font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #9E9BF0; }
 
@@ -115,67 +113,70 @@
   .about-h2 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 46px; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 22px; }
   .about-body { font-size: 17.5px; color: #44464C; line-height: 1.6; margin: 0 0 18px; }
   .about-quote { margin: 30px 0 0; padding: 4px 0 4px 22px; border-left: 2px solid #3A37CC; font-family: 'Newsreader', serif; font-style: italic; font-size: 23px; line-height: 1.4; color: #26282E; }
-  .cred-rows { border-top: 1px solid #E2DCCF; }
-  .cred-row { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 20px 2px; border-bottom: 1px solid #E2DCCF; }
+  .cred-rows { border-top: 1px solid #E6E8EC; }
+  .cred-row { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 20px 2px; border-bottom: 1px solid #E6E8EC; }
   .cred-row-label { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #3A37CC; padding-top: 3px; }
   .cred-row-val { font-size: 16.5px; color: #2C2E34; line-height: 1.5; }
-  .why-box { background: #16191F; color: #F1EDE4; border-radius: 14px; padding: 30px 28px; margin-top: 30px; }
+  .why-box { background: #16191F; color: #F2F4F7; border-radius: 14px; padding: 30px 28px; margin-top: 30px; }
   .why-label { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #9E9BF0; margin-bottom: 20px; }
   .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .why-title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 18.5px; margin: 0 0 7px; color: #F6F2E9; }
-  .why-body { margin: 0; font-size: 14px; color: #A6A29A; line-height: 1.5; }
+  .why-title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 18.5px; margin: 0 0 7px; color: #F7F8FA; }
+  .why-body { margin: 0; font-size: 14px; color: #A2A6AE; line-height: 1.5; }
 
   /* Validation */
-  .validation { border-top: 1px solid #DCD6C8; background: #EFEBE2; }
+  .validation { border-top: 1px solid #E5E7EB; background: #F1F3F5; }
   .validation-inner { max-width: 1200px; margin: 0 auto; padding: 88px 32px; }
   .validation-h2 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 46px; line-height: 1.05; letter-spacing: -0.02em; margin: 0; max-width: 13em; }
   .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
-  .test-card { margin: 0; background: #FBFAF7; border: 1px solid #E4DDCD; border-radius: 16px; padding: 30px; }
+  .test-card { margin: 0; background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 16px; padding: 30px; }
   .test-opener { font-family: 'Newsreader', serif; font-size: 46px; line-height: 0; height: 24px; color: #3A37CC; }
   .test-quote { margin: 0 0 24px; font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.45; color: #26282E; }
   .test-caption { display: flex; align-items: center; gap: 12px; }
-  .test-avatar { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; background: #E7E0D2; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3A37CC; }
+  .test-avatar { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; background: #EDEFF2; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3A37CC; }
   .test-name { display: block; font-size: 14.5px; font-weight: 600; color: #16191F; }
   .test-role { display: block; font-size: 13px; color: #76777C; }
-  .test-disclaimer { margin-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A968D; }
+  .test-disclaimer { margin-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A9DA5; }
 
   /* Contact */
   .contact { max-width: 1200px; margin: 0 auto; padding: 90px 32px 100px; }
-  .contact-card { background: #EFEBE2; border: 1px solid #DCD6C8; border-radius: 24px; padding: 56px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; }
+  .contact-card { background: #F1F3F5; border: 1px solid #E5E7EB; border-radius: 24px; padding: 56px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; }
   .contact-h2 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 42px; line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 16px; }
   .contact-body { font-size: 16.5px; color: #5A5C62; margin: 0 0 34px; max-width: 24em; }
   .contact-links { display: flex; flex-direction: column; gap: 22px; }
   .contact-link { display: flex; gap: 15px; align-items: center; text-decoration: none; color: #16191F; }
-  .contact-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 1px solid #DCD6C8; display: flex; align-items: center; justify-content: center; color: #3A37CC; }
+  .contact-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 1px solid #E5E7EB; display: flex; align-items: center; justify-content: center; color: #3A37CC; }
   .contact-link-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A8B8F; }
   .contact-link-val { font-size: 16.5px; font-weight: 500; }
-  .contact-form { background: #FBFAF6; border: 1px solid #E4DDCD; border-radius: 18px; padding: 34px; }
+  .contact-form { background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 18px; padding: 34px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .form-field { display: block; }
-  .form-field + .form-field, .form-row + .form-field, .form-field + .form-row { margin-top: 18px; }
+  .form-field + .form-field, .form-row + .form-field { margin-top: 18px; }
   .form-label { display: block; font-size: 13.5px; font-weight: 600; color: #3C3E44; margin-bottom: 8px; }
-  .form-input { width: 100%; padding: 13px 15px; font-family: inherit; font-size: 15px; color: #16191F; background: #fff; border: 1px solid #D8D1C0; border-radius: 9px; outline: none; transition: border-color .2s ease; }
+  .form-input { width: 100%; padding: 13px 15px; font-family: inherit; font-size: 15px; color: #16191F; background: #fff; border: 1px solid #DBDEE3; border-radius: 9px; outline: none; transition: border-color .2s ease; }
   .form-input:focus { border-color: #3A37CC; }
   textarea.form-input { resize: vertical; }
   .btn-submit { margin-top: 22px; width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: #3A37CC; color: #fff; font-family: inherit; font-size: 15.5px; font-weight: 600; padding: 15px; border: none; border-radius: 10px; cursor: pointer; transition: background .2s ease; }
   .btn-submit:hover { background: #2A2799; }
 
   /* Footer */
-  .footer { background: #16191F; color: #F1EDE4; border-top: 1px solid rgba(241,237,228,0.1); }
+  .footer { background: #16191F; color: #F2F4F7; border-top: 1px solid rgba(242,244,247,0.1); }
   .footer-inner { max-width: 1200px; margin: 0 auto; padding: 54px 32px 40px; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
   .footer-brand { max-width: 24em; }
-  .footer-logo { display: flex; align-items: center; gap: 11px; margin-bottom: 16px; }
-  .footer-logo img { width: 38px; height: 38px; object-fit: contain; filter: brightness(0) invert(1); }
-  .footer-wordmark { font-family: 'Newsreader', serif; font-size: 23px; font-weight: 500; }
-  .footer-wordmark em { font-style: italic; color: #9E9BF0; }
-  .footer-tagline { margin: 0; font-size: 14.5px; color: #9A968D; line-height: 1.6; }
+  .footer-logo { display: flex; align-items: center; gap: 13px; margin-bottom: 16px; }
+  .footer-badge { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 14px; background: rgba(242,244,247,0.06); border: 1px solid rgba(242,244,247,0.16); flex-shrink: 0; }
+  .footer-badge img { width: 40px; height: 40px; object-fit: contain; filter: brightness(0) invert(1); }
+  .footer-wordmark-stack { display: inline-flex; flex-direction: column; line-height: 1.05; }
+  .footer-wordmark { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 600; letter-spacing: -0.015em; color: #F7F8FA; }
+  .footer-wordmark em { font-style: italic; font-weight: 500; color: #9E9BF0; }
+  .footer-tagline { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: #767A82; margin-top: 5px; padding-left: 2px; }
+  .footer-desc { margin: 0; font-size: 14.5px; color: #9A9DA5; line-height: 1.6; }
   .footer-cols { display: flex; gap: 60px; flex-wrap: wrap; }
-  .footer-col-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #74716A; margin-bottom: 16px; }
+  .footer-col-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #767A82; margin-bottom: 16px; }
   .footer-links { display: flex; flex-direction: column; gap: 11px; }
-  .footer-links a { text-decoration: none; color: #C8C4BB; font-size: 14.5px; transition: color .2s ease; }
-  .footer-links a:hover { color: #F1EDE4; }
-  .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 22px 32px; border-top: 1px solid rgba(241,237,228,0.1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  .footer-bottom span { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #74716A; }
+  .footer-links a { text-decoration: none; color: #C7CAD1; font-size: 14.5px; transition: color .2s ease; }
+  .footer-links a:hover { color: #F2F4F7; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 22px 32px; border-top: 1px solid rgba(242,244,247,0.1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .footer-bottom span { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #767A82; }
 
   /* Responsive */
   @media (max-width: 940px) {
@@ -194,8 +195,8 @@
     .nav-burger { display: flex; }
   }
   @media (max-width: 620px) {
-    .hero-h1 { font-size: 46px !important; }
-    .section-h2, .work-h2, .about-h2, .validation-h2, .contact-h2 { font-size: 34px !important; }
+    .hero-h1 { font-size: 46px; }
+    .section-h2, .work-h2, .about-h2, .validation-h2, .contact-h2 { font-size: 34px; }
     .why-grid { grid-template-columns: 1fr; }
     .contact-card { padding: 32px; }
     .hero, .services, .work-inner, .about, .validation-inner, .contact, .footer-inner, .footer-bottom, .cred-inner { padding-left: 22px; padding-right: 22px; }
@@ -210,14 +211,19 @@
 <nav class="nav" id="top">
   <div class="nav-inner">
     <a href="#home" class="nav-logo">
-      <img src="Images/Logo.png" alt="CognoWise">
-      <span class="nav-wordmark">Cogno<em>Wise</em></span>
+      <span class="nav-badge">
+        <img src="Images/Logo.png" alt="CognoWise">
+      </span>
+      <span class="nav-wordmark-stack">
+        <span class="nav-wordmark">Cogno<em>Wise</em></span>
+        <span class="nav-tagline">Neuroscience · Writing</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="#services" class="nav-link">Services</a>
       <a href="#work" class="nav-link">Selected work</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-cta">Start a project <span class="mono">&rarr;</span></a>
+      <a href="#contact" class="nav-cta">Start a project &rarr;</a>
     </div>
     <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -256,19 +262,13 @@
         </div>
         <div class="hero-divider"></div>
         <div>
-          <div class="hero-stat-val">PhD</div>
-          <div class="hero-stat-label">Neuroscience</div>
-        </div>
-        <div class="hero-divider"></div>
-        <div>
-          <div class="hero-stat-val">Bench&ndash;to&ndash;page</div>
+          <div class="hero-stat-val">Bench&ndash;to&ndash;Paper</div>
           <div class="hero-stat-label">Full expertise</div>
         </div>
       </div>
     </div>
-    <div class="hero-portrait">
-      <div class="hero-portrait-shadow"></div>
-      <div class="hero-portrait-frame">
+    <div class="hero-portrait-wrap">
+      <div class="hero-portrait-circle">
         <img src="Images/Picture3.jpg" alt="Dr. Rafaella A. Gonçalves">
       </div>
     </div>
@@ -311,7 +311,6 @@
     <h2 class="section-h2">Six ways I move a project from data to published.</h2>
     <p>Specialized, end-to-end support — tailored to the rigor your work demands.</p>
   </div>
-
   <div class="svc-list delay-1" data-reveal>
     <div class="svc-row">
       <div class="svc-num">01</div>
@@ -401,7 +400,6 @@
         View Google Scholar <span style="font-family:'IBM Plex Mono',monospace;">&#8599;</span>
       </a>
     </div>
-
     <div class="pub-groups delay-1" data-reveal>
       <div class="pub-group">
         <div class="pub-group-label">Review Articles</div>
@@ -439,7 +437,6 @@
           <div class="pub-arrow"><span>&rarr;</span></div>
         </a>
       </div>
-
       <div class="pub-group">
         <div class="pub-group-label">Original Articles</div>
         <a href="https://alz-journals.onlinelibrary.wiley.com/doi/abs/10.1002/alz.12893" target="_blank" rel="noopener" class="pub-row">
@@ -622,7 +619,6 @@
           </div>
         </div>
       </div>
-
       <form class="contact-form" id="contact-form" novalidate>
         <div class="form-row">
           <label class="form-field">
@@ -663,10 +659,15 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="Images/Logo.png" alt="CognoWise">
-        <span class="footer-wordmark">Cogno<em>Wise</em></span>
+        <span class="footer-badge">
+          <img src="Images/Logo.png" alt="CognoWise">
+        </span>
+        <span class="footer-wordmark-stack">
+          <span class="footer-wordmark">Cogno<em>Wise</em></span>
+          <span class="footer-tagline">Neuroscience · Writing</span>
+        </span>
       </div>
-      <p class="footer-tagline">Medical writing, scientific editing &amp; neuroscience consulting by Dr. Rafaella A. Gonçalves.</p>
+      <p class="footer-desc">Medical writing, scientific editing &amp; neuroscience consulting by Dr. Rafaella A. Gonçalves.</p>
     </div>
     <div class="footer-cols">
       <div>
