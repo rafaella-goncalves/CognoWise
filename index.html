@@ -44,7 +44,6 @@
   .hero { max-width: 1200px; margin: 0 auto; padding: 84px 32px 70px; }
   .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: #3A37CC; text-transform: uppercase; animation: cw-rise .7s ease .05s both; }
-  .hero-eyebrow-line { width: 26px; height: 1px; background: #3A37CC; display: inline-block; }
   .hero-h1 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 68px; line-height: 1.02; letter-spacing: -0.02em; margin: 22px 0 0; color: #1B1834; animation: cw-rise .7s ease .14s both; }
   .hero-h1 em { font-style: italic; color: #3A37CC; }
   .hero-body { max-width: 30em; margin: 26px 0 0; font-size: 18.5px; line-height: 1.62; color: #44464C; animation: cw-rise .7s ease .24s both; }
@@ -65,9 +64,10 @@
   .cred-strip { border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; background: #F1F3F5; }
   .cred-inner { max-width: 1200px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
   .cred-label { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8B8F; white-space: nowrap; }
-  .cred-items { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; font-family: 'Newsreader', serif; font-size: 18px; color: #3C3E44; }
-  .cred-item { display: inline-flex; align-items: center; gap: 9px; }
-  .cred-item.italic { font-style: italic; }
+  .cred-logos { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .cred-logo { display: inline-flex; align-items: center; justify-content: center; height: 62px; padding: 11px 20px; background: #fff; border: 1px solid #E6E8EC; border-radius: 12px; box-shadow: 0 1px 2px rgba(22,25,31,0.04); }
+  .cred-logo img { max-height: 38px; max-width: 150px; width: auto; height: auto; object-fit: contain; filter: grayscale(1); opacity: 0.55; transition: filter .3s ease, opacity .3s ease; }
+  .cred-logo:hover img { filter: grayscale(0); opacity: 1; }
 
   /* Services */
   .services { max-width: 1200px; margin: 0 auto; padding: 96px 32px 84px; }
@@ -150,7 +150,7 @@
   .contact-form { background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 18px; padding: 34px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .form-field { display: block; }
-  .form-field + .form-field, .form-row + .form-field { margin-top: 18px; }
+  .contact-form > .form-field + .form-field, .contact-form > .form-row + .form-field { margin-top: 18px; }
   .form-label { display: block; font-size: 13.5px; font-weight: 600; color: #3C3E44; margin-bottom: 8px; }
   .form-input { width: 100%; padding: 13px 15px; font-family: inherit; font-size: 15px; color: #1B1834; background: #fff; border: 1px solid #DBDEE3; border-radius: 9px; outline: none; transition: border-color .2s ease; }
   .form-input:focus { border-color: #3A37CC; }
@@ -180,7 +180,15 @@
 
   /* Responsive */
   @media (max-width: 940px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 0; text-align: center; }
+    .hero-text { display: contents; }
+    .hero-eyebrow { order: 1; justify-self: center; }
+    .hero-h1 { order: 2; }
+    .hero-portrait-wrap { order: 3; margin-top: 34px; }
+    .hero-body { order: 4; margin-left: auto; margin-right: auto; }
+    .hero-actions { order: 5; justify-content: center; }
+    .hero-stats { order: 6; justify-content: center; }
+    .hero-portrait-circle { max-width: 300px; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-sticky { position: static; }
     .contact-card { grid-template-columns: 1fr; }
@@ -196,12 +204,15 @@
   }
   @media (max-width: 620px) {
     .hero-h1 { font-size: 46px; }
+    .hero-stats { gap: 22px; }
     .section-h2, .work-h2, .about-h2, .validation-h2, .contact-h2 { font-size: 34px; }
     .why-grid { grid-template-columns: 1fr; }
     .contact-card { padding: 32px; }
     .hero, .services, .work-inner, .about, .validation-inner, .contact, .footer-inner, .footer-bottom, .cred-inner { padding-left: 22px; padding-right: 22px; }
     .cred-row { grid-template-columns: 1fr; gap: 4px; }
     .form-row { grid-template-columns: 1fr; }
+    .cred-logo { height: 52px; padding: 9px 14px; }
+    .cred-logo img { max-height: 30px; max-width: 116px; }
   }
 </style>
 </head>
@@ -240,9 +251,8 @@
 <!-- HERO -->
 <section id="home" class="hero">
   <div class="hero-grid">
-    <div>
+    <div class="hero-text">
       <div class="hero-eyebrow">
-        <span class="hero-eyebrow-line"></span>
         Medical writing · Editing · Consulting
       </div>
       <h1 class="hero-h1">
@@ -279,27 +289,12 @@
 <section class="cred-strip">
   <div class="cred-inner">
     <span class="cred-label">Trained &amp; published at</span>
-    <div class="cred-items">
-      <span class="cred-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A37CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
-        Queen's University
-      </span>
-      <span class="cred-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A37CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
-        Gladstone &middot; UCSF
-      </span>
-      <span class="cred-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A37CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
-        University of Toronto
-      </span>
-      <span class="cred-item italic">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3A37CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 3v16"/></svg>
-        Nature Reviews Neuroscience
-      </span>
-      <span class="cred-item italic">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3A37CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 3v16"/></svg>
-        Alzheimer's &amp; Dementia
-      </span>
+    <div class="cred-logos">
+      <span class="cred-logo"><img src="Images/logos/queens.png" alt="Queen's University" loading="lazy"></span>
+      <span class="cred-logo"><img src="Images/logos/ucsf.png" alt="Gladstone Institutes · UCSF" loading="lazy"></span>
+      <span class="cred-logo"><img src="Images/logos/utoronto.png" alt="University of Toronto" loading="lazy"></span>
+      <span class="cred-logo"><img src="Images/logos/nrn.png" alt="Nature Reviews Neuroscience" loading="lazy"></span>
+      <span class="cred-logo"><img src="Images/logos/alzheimers.png" alt="Alzheimer's &amp; Dementia — The Journal of the Alzheimer's Association" loading="lazy"></span>
     </div>
   </div>
 </section>
@@ -604,18 +599,9 @@
             </span>
             <span>
               <span class="contact-link-label">LinkedIn</span>
-              <span class="contact-link-val">in/goncalvesra</span>
+              <span class="contact-link-val">linkedin.com/in/goncalvesra</span>
             </span>
           </a>
-          <div class="contact-link" style="cursor:default;">
-            <span class="contact-icon">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </span>
-            <span>
-              <span class="contact-link-label">Location</span>
-              <span class="contact-link-val">Ottawa, ON · available worldwide</span>
-            </span>
-          </div>
         </div>
       </div>
       <form class="contact-form" id="contact-form" novalidate>
